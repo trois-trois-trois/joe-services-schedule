@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import sampleData from './sample_data';
-import ramsSchedule from './rams_schedule';
-import ramsFeed from './feed_data'
+import sampleData from './sample_data/sample_data';
+import ramsSchedule from './sample_data/rams_schedule';
+import ramsFeed from './sample_data/feed_data'
 
 import Schedule from './components/Schedule.jsx';
 import Feed from './components/Feed.jsx'
