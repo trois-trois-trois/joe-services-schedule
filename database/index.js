@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/schedules');
+mongoose.connect('mongodb://localhost/espn/schedules');
 
 const db = mongoose.connection;
 mongoose.Promise = global.Promise;
