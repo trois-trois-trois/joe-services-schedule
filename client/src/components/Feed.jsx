@@ -10,6 +10,9 @@ var Feed = (props) => (
             <div><img src={`${ramFeed.bigphoto}`}/></div>
             <div>{ramFeed.title} </div>
             <div>author: {ramFeed.author} <img src={`${ramFeed.authorphoto}`}/></div>
+            <p>Updates: {ramFeed.newsfeed}
+              <br/>{ramFeed.timestamp}
+            </p>
           </li>
         )
       })}
