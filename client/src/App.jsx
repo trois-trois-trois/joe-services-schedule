@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import sampleData from './sample_data/sample_data';
 import ramsSchedule from './sample_data/rams_schedule';
 import ramsFeed from './sample_data/feed_data'
 
@@ -12,7 +11,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      teamData: sampleData,
       ramsSchedule: ramsSchedule,
       ramsFeed: ramsFeed
     };
@@ -23,8 +21,7 @@ class App extends Component {
       <div>
         <div id='schedule'>
           <Schedule
-            teamData={this.state.teamData}
-            rams={this.state.ramsSchedule}
+            ramsSchedule={this.state.ramsSchedule}
           />
         </div>
         <div id='feed'>
