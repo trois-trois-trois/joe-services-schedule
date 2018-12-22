@@ -31,7 +31,7 @@ var Schedule = (props) => (
     {/* //zen coding..hit tab and autofills
     table.table>thead>tr>th*8 */}
     <table className="table">
-      <head>
+      <thead>
         <tr>
           {/* //add column headings here */}
           <th>Team</th>
@@ -43,12 +43,12 @@ var Schedule = (props) => (
           <th>HI REC</th>
           <th>HI RUSH</th>
         </tr>
-      </head>
+      </thead>
       {/* zen code td */}
       {/* tbody>tr>td*8 */}
       <tbody>
         {props.ramsSchedule.map(schedule => (
-        <tr>
+        <tr key={schedule.id}>
           <td><img src={`${schedule.teamlogo}`}/>@{schedule.team}</td>
           <td><img src={`${schedule.opponentlogo}`}></img> @ {schedule.opponent}</td>
           <td>{schedule.week}</td>
