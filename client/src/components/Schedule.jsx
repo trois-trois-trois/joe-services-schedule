@@ -27,7 +27,7 @@ import React from 'react';
 
 
 var Schedule = (props) => (
-  <div>
+  <div><h1>Los Angeles Rams Schedule - 2018</h1>
     {/* //zen coding..hit tab and autofills
     table.table>thead>tr>th*8 */}
     <table className="table">
@@ -35,30 +35,32 @@ var Schedule = (props) => (
         <tr>
           {/* //add column headings here */}
           <th>Team</th>
-          <th>Opponent</th>
           <th>Week</th>
           <th>Date</th>
-          <th>W/L</th>
+          <th>Result</th>
+          <th>W-L</th>
+          <th>Opponent</th>
           <th>HI PASS</th>
           <th>HI REC</th>
           <th>HI RUSH</th>
         </tr>
       </thead>
       {/* zen code td */}
-      {/* tbody>tr>td*8 */}
+      {/* tbody>tr>td*9 */}
       <tbody>
         {props.ramsSchedule.map(schedule => (
         <tr key={schedule.id}>
           <td><img src={`${schedule.teamlogo}`}/>@{schedule.team}</td>
-          <td><img src={`${schedule.opponentlogo}`}></img> @ {schedule.opponent}</td>
           <td>{schedule.week}</td>
           <td>{schedule.date}</td>
           <td>{schedule.result} Score:{schedule.winloss}</td>
+          <td>{schedule.winloss}</td>
+          <td>@<img src={`${schedule.opponentlogo}`}></img> {schedule.opponent}</td>
           <td>{schedule.players} {schedule.stats.pass} yards</td>
           <td>{schedule.players} {schedule.stats.rec} yards</td>
           <td>{schedule.players} {schedule.stats.rush} yards</td>
         </tr>
-          ))}
+        ))}
       </tbody>
     </table>
   </div>
