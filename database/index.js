@@ -34,8 +34,6 @@ const scheduledb = mongoose.model('Schedule', scheduleSchema)
 module.exports = scheduledb;
 
 
-
-
 // var test = new Schedule(
 //   {
 //     id: 2,
