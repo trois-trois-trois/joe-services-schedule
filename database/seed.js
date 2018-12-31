@@ -10,7 +10,7 @@ const ramsSchedule =
   "week": 1,
   "date": "28-Oct-2018",
   "opponent": "Arizona Cardinals",
-  "opponentlogo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/oak.png&h=50&w=50",
+  "opponentlogo": "http://loodibee.com/wp-content/uploads/arizona-cardinals-team-logo-1988-2004-300x300.png",
   "result": "W 34-0",
   "winloss": "3-0",
   "stats": {
@@ -27,7 +27,7 @@ const ramsSchedule =
   "week": 2,
   "date": "08-Dec-2018",
   "opponent": "Atlanta Falcons",
-  "opponentlogo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/oak.png&h=50&w=50",
+  "opponentlogo": "http://southbronxsaints.org/wp-content/uploads/2015/10/falcons-128x128.png",
   "result": "W 23-20",
   "winloss": "5-0",
   "stats": {
@@ -44,7 +44,7 @@ const ramsSchedule =
   "week": 3,
   "date": "16-Sep-2018",
   "opponent": "Denver Broncos",
-  "opponentlogo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/oak.png&h=50&w=50",
+  "opponentlogo": "https://b3h2.scene7.com/is/image/BedBathandBeyond/147160663340556p?$imagePLP$&wid=256&hei=256",
   "result": "L 30-23",
   "winloss": "11-3",
   "stats": {
@@ -61,7 +61,7 @@ const ramsSchedule =
   "week": 4,
   "date": "11-Sep-2018",
   "opponent": "Green Bay Packers",
-  "opponentlogo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/oak.png&h=50&w=50",
+  "opponentlogo": "http://southbronxsaints.org/wp-content/uploads/2015/10/l89705-green-bay-packers-logo-23598-128x128.png",
   "result": "W 14-0",
   "winloss": "8-1",
   "stats": {
@@ -78,7 +78,7 @@ const ramsSchedule =
   "week": 5,
   "date": "10-Nov-2018",
   "opponent": "Kansas City Chiefs",
-  "opponentlogo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/oak.png&h=50&w=50",
+  "opponentlogo": "https://i2.wp.com/thesportswolves.com/wp-content/uploads/2018/07/KCicon.png?resize=256%2C256",
   "result": "W 39-10",
   "winloss": "11-2",
   "stats": {
@@ -95,7 +95,7 @@ const ramsSchedule =
   "week": 6,
   "date": "09-Nov-2018",
   "opponent": "San Francisco 49ers",
-  "opponentlogo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/oak.png&h=50&w=50",
+  "opponentlogo": "https://b3h2.scene7.com/is/image/BedBathandBeyond/147170763339710p?$imagePLP$&wid=256&hei=256",
   "result": "W 35-23",
   "winloss": "8-0",
   "stats": {
@@ -112,7 +112,7 @@ const ramsSchedule =
   "week": 7,
   "date": "18-Nov-2018",
   "opponent": "Washington Redskins",
-  "opponentlogo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/oak.png&h=50&w=50",
+  "opponentlogo": "https://d1si3tbndbzwz9.cloudfront.net/football/team/20/logo.png",
   "result": "L 30-23",
   "winloss": "13-3",
   "stats": {
@@ -129,7 +129,7 @@ const ramsSchedule =
   "week": 8,
   "date": "12-Dec-2018",
   "opponent": "Jacksonville Jaguars",
-  "opponentlogo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/oak.png&h=50&w=50",
+  "opponentlogo": "http://southbronxsaints.org/wp-content/uploads/2015/10/jaguars-128x128.png",
   "result": "W 38-31",
   "winloss": "8-0",
   "stats": {
@@ -214,7 +214,7 @@ const ramsSchedule =
   "week": 13,
   "date": "24-Nov-2018",
   "opponent": "Miami Dolphins",
-  "opponentlogo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/oak.png&h=50&w=50",
+  "opponentlogo": "https://b3h2.scene7.com/is/image/BedBathandBeyond/147168763339611p?$imagePLP$&wid=256&hei=256",
   "result": "W 29-27",
   "winloss": "7-0",
   "stats": {
@@ -282,7 +282,7 @@ const ramsSchedule =
   "week": 17,
   "date": "26-Oct-2018",
   "opponent": "Detroit Lions",
-  "opponentlogo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/oak.png&h=50&w=50",
+  "opponentlogo": "https://b3h2.scene7.com/is/image/BedBathandBeyond/147167563339550p?$imagePLP$&wid=256&hei=256",
   "result": "W 31-3",
   "winloss": "13-3",
   "stats": {

@@ -1,4 +1,6 @@
-# Project Name
+# Schedule Component for ESPN.com NFL Team Page
+
+>The schedule component will include a full picture of the teams schedule for the season comprised of several rows and columns with information and statistics for each game.  The information will be pulled from a database and rendered into each row and column.
 
 > Project description
 
