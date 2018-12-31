@@ -1,4 +1,6 @@
-# Project Name
+# Schedule Component for ESPN.com NFL Team Page
+
+>The schedule component will include a full picture of the teams schedule for the season comprised of several rows and columns with information and statistics for each game.  The information will be pulled from a database and rendered into each row and column.
 
 > Project description
 
@@ -14,6 +16,7 @@
 1. [Usage](#Usage)
 1. [Requirements](#requirements)
 1. [Development](#development)
+1. [Setup]
 
 ## Usage
 
@@ -35,5 +38,12 @@ From within the root directory:
 ```sh
 npm install -g webpack
 npm install
+```
+## Setup
+
+```sh
+To start the server: npm run server
+To start webpack: npm run react
+To seed the database: npm run seed
 ```
 

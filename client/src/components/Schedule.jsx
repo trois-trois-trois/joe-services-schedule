@@ -1,7 +1,13 @@
 import React from 'react';
 
+const style = {
+  image: {
+    border: '1px solid #ccc',
+    background: '#fefefe',
+  },
+}
 
-var Schedule = (props) => (
+const Schedule = (props) => (
   <div><h1>Los Angeles Rams Schedule - 2018</h1>
     {/* //zen coding..hit tab and autofills
     table.table>thead>tr>th*8 */}
@@ -25,12 +31,12 @@ var Schedule = (props) => (
       <tbody>
         {props.ramsSchedule.map(schedule => (
         <tr key={schedule.id}>
-          <td><img src={`${schedule.teamlogo}`}/>@{schedule.team}</td>
+          <td><img src={`${schedule.teamlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/>@{schedule.team}</td>
           <td>{schedule.week}</td>
           <td>{schedule.date}</td>
           <td>{schedule.result} Score:{schedule.winloss}</td>
           <td>{schedule.winloss}</td>
-          <td>@<img src={`${schedule.opponentlogo}`} className="rounded-circle"></img> {schedule.opponent}</td>
+          <td>@<img src={`${schedule.opponentlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/> {schedule.opponent}</td>
           <td>{schedule.players} {schedule.stats.pass} yards</td>
           <td>{schedule.players} {schedule.stats.rec} yards</td>
           <td>{schedule.players} {schedule.stats.rush} yards</td>
