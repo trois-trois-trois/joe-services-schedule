@@ -39,7 +39,9 @@ npm install
 ```
 ## Setup
 
-- To start the server: npm run server
-- To start webpack: npm run react
-- To seed the database: npm run seed
+```sh
+To start the server: npm run server
+To start webpack: npm run react
+To seed the database: npm run seed
+```
 
