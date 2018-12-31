@@ -1,19 +1,33 @@
 import React, { Component } from 'react';
 
-import ramsSchedule from './sample_data/rams_schedule';
+//import teamSchedule from './sample_data/rams_schedule';
 import ramsFeed from './sample_data/feed_data'
 
 import Schedule from './components/Schedule.jsx';
-import Feed from './components/Feed.jsx'
+import Feed from './components/Feed.jsx';
 
-
+//const scheduleUrl = 'http://localhost:3000/espn/schedules'
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ramsSchedule: ramsSchedule,
+      schedule: [],
       ramsFeed: ramsFeed
     };
+  }
+
+
+  componentDidMount() {
+    fetch('espn/schedules')
+    .then(res => res.json())
+    .then(data => {
+      this.setState({
+        schedule: data,
+      })
+    })
+    .catch((err) => {
+      console.log('error: ', err);
+    });
   }
 
   render() {
@@ -21,7 +35,7 @@ class App extends Component {
       <div>
         <div id='schedule'>
           <Schedule
-            ramsSchedule={this.state.ramsSchedule}
+            ramsSchedule={this.state.schedule}
           />
         </div>
         <div id='feed'>
