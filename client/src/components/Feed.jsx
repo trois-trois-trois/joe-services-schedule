@@ -6,7 +6,7 @@ var Feed = (props) => (
     <ul>
       {props.ramsFeed.map((ramFeed) => {
         return(
-          <li className='team-list-item'key={ramFeed.id}>
+          <li key={ramFeed.id} id="sidebar-wrapper">
             <div><img src={`${ramFeed.bigphoto}`}/></div>
             <div>{ramFeed.title} </div>
             <div>author: {ramFeed.author} <img src={`${ramFeed.authorphoto}`}/></div>
