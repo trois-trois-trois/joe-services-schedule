@@ -14,6 +14,7 @@
 1. [Usage](#Usage)
 1. [Requirements](#requirements)
 1. [Development](#development)
+1. [Setup]
 
 ## Usage
 
@@ -36,4 +37,9 @@ From within the root directory:
 npm install -g webpack
 npm install
 ```
+## Setup
+
+- To start the server: npm run server
+- To start webpack: npm run react
+- To seed the database: npm run seed
 
