@@ -1,4 +1,5 @@
-const scheduledb = require('./index.js')
+const db = require('./index.js');
+const Schedule = require('./index.js');
 
 const ramsSchedule =
 [
@@ -295,7 +296,7 @@ const ramsSchedule =
 
 
 const insertRamSchedule = function() {
-  scheduledb.create(ramsSchedule)
+  Schedule.create(ramsSchedule)
     .then(() => db.disconnect());
 };
 
