@@ -29,9 +29,10 @@ const scheduleSchema = {
     feed: String
   }
 
-const scheduledb = mongoose.model('Schedule', scheduleSchema)
+const Schedule = mongoose.model('Schedule', scheduleSchema)
 
-module.exports = scheduledb;
+module.exports = db;
+module.exports = Schedule;
 
 
 // var test = new Schedule(
