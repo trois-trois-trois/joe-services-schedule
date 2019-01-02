@@ -7,7 +7,7 @@ const style = {
   },
 }
 
-const Schedule = (props) => (
+const Schedule = ({ramsSchedule}) => (
   <div><h1>Los Angeles Rams Schedule - 2018</h1>
     {/* //zen coding..hit tab and autofills
     table.table>thead>tr>th*8 */}
@@ -29,7 +29,7 @@ const Schedule = (props) => (
       {/* zen code td */}
       {/* tbody>tr>td*9 */}
       <tbody>
-        {props.ramsSchedule.map(schedule => (
+        {ramsSchedule.map(schedule => (
         <tr key={schedule.id}>
           <td><img src={`${schedule.teamlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/>@{schedule.team}</td>
           <td>{schedule.week}</td>

@@ -12,7 +12,10 @@ class App extends Component {
     super(props);
     this.state = {
       schedule: [],
-      ramsFeed: ramsFeed
+      ramsFeed: ramsFeed,
+      // home view should render schedule sidebar and gamefeed on the same page
+        // for now, test components by changing the "view" property until changeView method is implemented
+      view: 'feed'
     };
   }
 
@@ -33,22 +36,41 @@ class App extends Component {
   //.limit(17)
   //.sort({week: -1})
 
+  // TODO
+  // implement changeView method to switch from main page to schedule page
+
+  renderView() {
+    // receives props object, destructure properties
+    const { schedule, ramsFeed, view } = this.state;
+    if(view === 'home') {
+      return (
+        <div id='schedule'>
+          <Schedule
+            ramsSchedule={schedule}
+          />
+        </div>
+      )
+    }
+    if(view === 'feed') {
+      return (
+        <div id='feed'>
+          <Feed
+            ramsFeed={ramsFeed}
+          />
+        </div>
+      )
+    }
+
+  }
+
   render() {
     return (
       <div>
-        <div id='schedule'>
-          <Schedule
-            ramsSchedule={this.state.schedule}
-          />
-        </div>
-        <div id='feed'>
-          <Feed
-            ramsFeed={this.state.ramsFeed}
-          />
-        </div>
+        {this.renderView()}
       </div>
-    );
+    )
   }
+
 }
 
 export default App;
