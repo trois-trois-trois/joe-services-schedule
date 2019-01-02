@@ -12,6 +12,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.get('/espn/schedules', (req, res) => {
   db.find({}, (err, data) => {
   })
+  .limit(17)
+  .sort({week: 1})
   .then(function(data) {
     res.send(data);
   })
