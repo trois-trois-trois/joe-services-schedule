@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  console.log('MongoDB has connected');
+  console.log('MongoDB is connected to the Schedules database');
 });
 
 
