@@ -30,6 +30,9 @@ class App extends Component {
     });
   }
 
+  //.limit(17)
+  //.sort({week: -1})
+
   render() {
     return (
       <div>
