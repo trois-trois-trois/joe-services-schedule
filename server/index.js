@@ -26,8 +26,9 @@ app.get('/espn/schedules', (req, res) => {
 app.get('/espn/feeds', (req, res) => {
   FeedDB.find({}, (err, data) => {
   })
-  .limit(17)
-  // .sort({week: 1})
+  // 3 entries per game
+  .limit(51)
+  .sort({timestamp: 1})
   .then(function(data) {
     res.send(data);
   })
