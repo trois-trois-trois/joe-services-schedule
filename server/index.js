@@ -9,11 +9,11 @@ app.use(express.static(`${__dirname}/../client/dist`));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 
-
+// Schedule endpoint
 app.get('/espn/schedules', (req, res) => {
   ScheduleDB.find({}, (err, data) => {
   })
-  .limit(17)
+  // .limit(18)
   .sort({week: 1})
   .then(function(data) {
     res.send(data);
@@ -23,6 +23,7 @@ app.get('/espn/schedules', (req, res) => {
   })
 })
 
+// feed endpoint
 app.get('/espn/feeds', (req, res) => {
   FeedDB.find({}, (err, data) => {
   })
@@ -37,7 +38,7 @@ app.get('/espn/feeds', (req, res) => {
   })
 })
 
-// const port = 3000;
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {

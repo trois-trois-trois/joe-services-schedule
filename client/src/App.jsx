@@ -11,11 +11,12 @@ class App extends Component {
       ramsFeed: [],
       // home view should render schedule sidebar and gamefeed on the same page
         // for now, test components by changing the "view" property until changeView method is implemented
-      view: 'home'
+      view: 'schedule'
     };
   }
 
   componentDidMount() {
+    // fetch schedule data
     fetch('espn/schedules')
     .then(res => res.json())
     .then(data => {
@@ -27,6 +28,7 @@ class App extends Component {
       console.log('error: ', err);
     });
 
+    // fetch feed data
     fetch('espn/feeds')
     .then(res => res.json())
     .then(data => {
