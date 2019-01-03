@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  console.log('MongoDB has connected');
+  console.log('MongoDB is connected to the Schedules database');
 });
 
 
@@ -29,10 +29,22 @@ const scheduleSchema = {
     feed: String
   }
 
-const Schedule = mongoose.model('Schedule', scheduleSchema)
+const ScheduleDB = mongoose.model('Schedule', scheduleSchema)
 
 module.exports = db;
-module.exports = Schedule;
+module.exports = ScheduleDB;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // var test = new Schedule(

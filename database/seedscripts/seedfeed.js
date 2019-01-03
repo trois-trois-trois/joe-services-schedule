@@ -1,3 +1,6 @@
+const db = require('../Models/ScheduleDB.js');
+const FeedDB = require('../Models/FeedDB.js');
+
 const ramsFeed =
 
 [{
@@ -1002,4 +1005,9 @@ const ramsFeed =
   "timestamp": "6:01 PM"
 }]
 
-export default ramsFeed;
+const insertRamsFeed = function() {
+  FeedDB.create(ramsFeed)
+    .then(() => db.disconnect());
+};
+
+insertRamsFeed();

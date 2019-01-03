@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('../database/index.js');
+const ScheduleDB = require('../database/Models/ScheduleDB.js');
+const FeedDB = require('../database/Models/FeedDB.js');
 
 const app = express();
 
@@ -10,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 
 app.get('/espn/schedules', (req, res) => {
-  db.find({}, (err, data) => {
+  ScheduleDB.find({}, (err, data) => {
   })
   .limit(17)
   .sort({week: 1})
@@ -22,12 +23,24 @@ app.get('/espn/schedules', (req, res) => {
   })
 })
 
+app.get('/espn/feeds', (req, res) => {
+  FeedDB.find({}, (err, data) => {
+  })
+  // 3 entries per game
+  .limit(51)
+  .sort({timestamp: 1})
+  .then(function(data) {
+    res.send(data);
+  })
+  .catch(function(err) {
+    console.err(err);
+  })
+})
 
-//test test
+// const port = 3000;
+const port = process.env.PORT || 3000;
 
-const port = 3000;
-
-app.listen(port, function() {
+app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });
 
