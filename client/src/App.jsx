@@ -53,7 +53,7 @@ class App extends Component {
         <div id='home'>
           <div id='sidebarSchedule'>
             <SidebarSchedule
-              ramsSidebarSchedule={schedule}
+              ramsSchedule={schedule}
             />
           </div>
             <div id='feed'>
@@ -86,7 +86,7 @@ class App extends Component {
       return (
         <div id='sidebarSchedule'>
           <SidebarSchedule
-            ramsSidebarSchedule={schedule}
+            ramsSchedule={schedule}
           />
         </div>
       )
