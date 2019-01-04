@@ -52,7 +52,7 @@ const Schedule = ({ramsSchedule}) => (
       {/* button link for calendar */}
       <a className="btn btn-primary" href="http://espn.calreplyapp.com/nfl/subscription/tags#Los%20Angeles%20Rams" role="button">Add to calendar</a>
     </div>
-
+    <h5>Regular Season</h5>
     {/* //zen coding..hit tab and autofills
     table.table>thead>tr>th*8 */}
     <table className="table table-striped" >
