@@ -11,7 +11,7 @@ class App extends Component {
       ramsFeed: [],
       // home view should render schedule sidebar and gamefeed on the same page
         // for now, test components by changing the "view" property until changeView method is implemented
-      view: 'home'
+      view: 'schedule'
     };
   }
 
