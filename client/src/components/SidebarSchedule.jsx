@@ -52,7 +52,7 @@ const SidebarSchedule = ({ramsSchedule}) => (
       {ramsSchedule.map(schedule => (
         <pre key={schedule.id}>
           <p>
-            @<img src={`${schedule.opponentlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/>
+            @<img src={`${schedule.opponentlogo}`} className="rounded-circle" width={20} height={20} style={style.image}/>
             <small>{schedule.opponent}</small>
             <small>{schedule.result}</small>
           </p>
