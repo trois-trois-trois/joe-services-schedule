@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Schedule from './components/Schedule.jsx';
 import Feed from './components/Feed.jsx';
+import SidebarSchedule from './components/SidebarSchedule.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class App extends Component {
       ramsFeed: [],
       // home view should render schedule sidebar and gamefeed on the same page
         // for now, test components by changing the "view" property until changeView method is implemented
-      view: 'schedule'
+      view: 'sidebarSchedule'
     };
   }
 
@@ -50,8 +51,8 @@ class App extends Component {
     if(view === 'home') {
       return (
         <div id='home'>
-          <div id='schedule'>
-            <Schedule
+          <div id='sidebarSchedule'>
+            <SidebarSchedule
               ramsSchedule={schedule}
             />
           </div>
@@ -77,6 +78,15 @@ class App extends Component {
         <div id='feed'>
           <Feed
             ramsFeed={ramsFeed}
+          />
+        </div>
+      )
+    }
+    if(view === 'sidebarSchedule') {
+      return (
+        <div id='sidebarSchedule'>
+          <SidebarSchedule
+            ramsSchedule={schedule}
           />
         </div>
       )
