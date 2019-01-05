@@ -76,7 +76,7 @@ const Schedule = ({ramsSchedule}) => (
         <tr key={schedule.id}>
           <td>{schedule.week}</td>
           <td>{schedule.date}</td>
-          <td>{schedule.vs}<img src={`${schedule.opponentlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/> {schedule.opponent}</td>
+          <td>{schedule.vs}<img src={`${schedule.opponentlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/> {schedule.city}</td>
           <td>{schedule.wl} {schedule.result}</td>
           <td>{schedule.winloss}</td>
           <td>{schedule.players} {schedule.stats.pass} yards</td>
