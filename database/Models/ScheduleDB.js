@@ -13,7 +13,7 @@ db.once('open', function() {
 const scheduleSchema = {
     id: {type: Number, unique: true},
     vs: String,
-    at: String,
+    city: String,
     team: String,
     teamlogo: String,
     week: Number,
