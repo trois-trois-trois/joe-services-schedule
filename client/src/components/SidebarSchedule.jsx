@@ -50,13 +50,12 @@ const SidebarSchedule = ({ramsSchedule}) => (
       <div className="col-4">
       <h4>Regular Season</h4>
       {ramsSchedule.map(schedule => (
-        <pre key={schedule.id}>
-          <p>
-            @<img src={`${schedule.opponentlogo}`} className="rounded-circle" width={20} height={20} style={style.image}/>
-            <small>{schedule.opponent}</small>
-            <small>{schedule.result}</small>
+        // <pre key={schedule.id}>
+          <p key={schedule.id}>
+            @<img src={`${schedule.opponentlogo}`} className="rounded-circle" width={20} height={20} style={style.image}/><p>{schedule.opponent}</p>
+            <p>{schedule.result}</p>
           </p>
-          </pre>
+          // </pre>
           ))}
       </div>
     </div>
