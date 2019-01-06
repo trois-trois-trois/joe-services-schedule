@@ -7,42 +7,6 @@ const style = {
   },
 }
 
-// const SidebarSchedule = ({ramsSchedule}) => (
-// <div className="container">
-//   <div className="row">
-//     <div className="col align-self-start">
-//     <table className="table table-striped" >
-//       <thead>
-//         <tr>
-//           {/* //add column headings here */}
-//           <th scope ="col"></th>
-//           <th scope ="col"></th>
-//           <th scope ="col"></th>
-//           <th scope ="col"></th>
-//           <th scope ="col"></th>
-//           <th scope ="col"></th>
-//           <th scope ="col"></th>
-//           <th scope ="col"></th>
-//           <th scope ="col"></th>
-//           <th scope ="col"></th>
-//         </tr>
-//       </thead>
-//       {/* zen code td */}
-//       {/* tbody>tr>td*9 */}
-//       <tbody>
-//         {ramsSchedule.map(schedule => (
-//         <tr key={schedule.id}>
-//           <td>@ <img src={`${schedule.opponentlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/> {schedule.opponent}</td>
-//           <td>{schedule.result} </td>
-//         </tr>
-//         ))}
-//       </tbody>
-//     </table>
-//     </div>
-//   </div>
-// </div>
-// )
-
 
 const SidebarSchedule = ({ramsSchedule}) => (
   <div className="container-fluid">
@@ -64,11 +28,37 @@ const SidebarSchedule = ({ramsSchedule}) => (
 
 export default SidebarSchedule;
 
-/*
-          {ramsSchedule.map(schedule => (
-          <tr key={schedule.id}>
-            <td>@ <img src={`${schedule.opponentlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/> {schedule.opponent}</td>
-            <td>{schedule.result} </td>
-          </tr>
-          ))}
-*/
+
+
+// <table className="table table-striped" >
+//       <thead>
+//         <tr>
+//           {/* //add column headings here */}
+//           <th scope ="col">Week</th>
+//           <th scope ="col">Date</th>
+//           <th scope ="col">Opponent</th>
+//           <th scope ="col">Result</th>
+//           <th scope ="col">W-L</th>
+//           <th scope ="col">HI PASS</th>
+//           <th scope ="col">HI REC</th>
+//           <th scope ="col">HI RUSH</th>
+//         </tr>
+//       </thead>
+//       {/* zen code td */}
+//       {/* tbody>tr>td*9 */}
+//       <tbody>
+//         {ramsSchedule.map(schedule => (
+//         <tr key={schedule.id}>
+//           <td>{schedule.week}</td>
+//           <td>{schedule.date}</td>
+//           <td>{schedule.vs}<img src={`${schedule.opponentlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/> {schedule.city}</td>
+//           <td>{schedule.wl} {schedule.result}</td>
+//           <td>{schedule.winloss}</td>
+//           <td>{schedule.players} {schedule.stats.pass} yards</td>
+//           <td>{schedule.players} {schedule.stats.rec} yards</td>
+//           <td>{schedule.players} {schedule.stats.rush} yards</td>
+//         </tr>
+//         ))}
+//       </tbody>
+//     </table>
+

@@ -25,11 +25,13 @@ const scheduleSchema = {
     wl: String,
     link: String,
     stats: {
+      playerpass: String,
+      playerrush: String,
+      playerrec: String,
       pass: Number,
       rush: Number,
       rec: Number
     },
-    players: String,
     feed: String
   }
 
