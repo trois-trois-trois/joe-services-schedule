@@ -65,8 +65,8 @@ const Schedule = ({ramsSchedule}) => (
           <th scope ="col">Result</th>
           <th scope ="col">W-L</th>
           <th scope ="col">HI PASS</th>
-          <th scope ="col">HI REC</th>
           <th scope ="col">HI RUSH</th>
+          <th scope ="col">HI REC</th>
         </tr>
       </thead>
       {/* zen code td */}
@@ -76,12 +76,12 @@ const Schedule = ({ramsSchedule}) => (
         <tr key={schedule.id}>
           <td>{schedule.week}</td>
           <td>{schedule.date}</td>
-          <td>{schedule.vs}<img src={`${schedule.opponentlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/> {schedule.city}</td>
-          <td>{schedule.wl} {schedule.result}</td>
+          <td>{schedule.vs}<img src={`${schedule.opponentlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/> <a href={`${schedule.link}`}>{schedule.city}</a></td>
+          <td>{schedule.wl} <a href={`${schedule.link}`}>{schedule.result}</a></td>
           <td>{schedule.winloss}</td>
-          <td>{schedule.players} {schedule.stats.pass} yards</td>
-          <td>{schedule.players} {schedule.stats.rec} yards</td>
-          <td>{schedule.players} {schedule.stats.rush} yards</td>
+          <td><a href={`${schedule.link}`}>{schedule.stats.playerpass}</a> {schedule.stats.pass} yards</td>
+          <td><a href={`${schedule.link}`}>{schedule.stats.playerrush}</a> {schedule.stats.rush} yards</td>
+          <td><a href={`${schedule.link}`}>{schedule.stats.playerrec}</a> {schedule.stats.rec} yards</td>
         </tr>
         ))}
       </tbody>
