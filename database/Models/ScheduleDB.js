@@ -12,6 +12,8 @@ db.once('open', function() {
 
 const scheduleSchema = {
     id: {type: Number, unique: true},
+    vs: String,
+    city: String,
     team: String,
     teamlogo: String,
     week: Number,
@@ -20,6 +22,8 @@ const scheduleSchema = {
     opponentlogo: String,
     result: String,
     winloss: String,
+    wl: String,
+    link: String,
     stats: {
       pass: Number,
       rush: Number,

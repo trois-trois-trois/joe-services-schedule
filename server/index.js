@@ -9,6 +9,7 @@ app.use(express.static(`${__dirname}/../client/dist`));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 
+
 // Schedule endpoint
 app.get('/espn/schedules', (req, res) => {
   ScheduleDB.find({}, (err, data) => {
@@ -23,7 +24,8 @@ app.get('/espn/schedules', (req, res) => {
   })
 })
 
-// feed endpoint
+
+// Feed endpoint
 app.get('/espn/feeds', (req, res) => {
   FeedDB.find({}, (err, data) => {
   })

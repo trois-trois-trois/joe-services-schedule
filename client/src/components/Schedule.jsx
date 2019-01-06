@@ -59,12 +59,11 @@ const Schedule = ({ramsSchedule}) => (
       <thead>
         <tr>
           {/* //add column headings here */}
-          <th scope ="col">Team</th>
           <th scope ="col">Week</th>
           <th scope ="col">Date</th>
+          <th scope ="col">Opponent</th>
           <th scope ="col">Result</th>
           <th scope ="col">W-L</th>
-          <th scope ="col">Opponent</th>
           <th scope ="col">HI PASS</th>
           <th scope ="col">HI REC</th>
           <th scope ="col">HI RUSH</th>
@@ -75,12 +74,11 @@ const Schedule = ({ramsSchedule}) => (
       <tbody>
         {ramsSchedule.map(schedule => (
         <tr key={schedule.id}>
-          <td><img src={`${schedule.teamlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/>@{schedule.team}</td>
           <td>{schedule.week}</td>
           <td>{schedule.date}</td>
-          <td>{schedule.result} Score:{schedule.winloss}</td>
+          <td>{schedule.vs}<img src={`${schedule.opponentlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/> {schedule.city}</td>
+          <td>{schedule.wl} {schedule.result}</td>
           <td>{schedule.winloss}</td>
-          <td>@<img src={`${schedule.opponentlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/> {schedule.opponent}</td>
           <td>{schedule.players} {schedule.stats.pass} yards</td>
           <td>{schedule.players} {schedule.stats.rec} yards</td>
           <td>{schedule.players} {schedule.stats.rush} yards</td>
