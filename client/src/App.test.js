@@ -1,14 +1,47 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable no-undef */
 import App from './App';
+// import { doesNotReject } from 'assert';
+import Schedule from './components/Schedule';
+import { mount } from 'enzyme';
+import renderer from 'react-test-renderer';
+
 
 describe('App component', () => {
-  it('renders correctly', () => {
+  it('should render App component', () => {
     const wrapper = shallow(<App />);
     expect(wrapper).toMatchSnapshot();
   });
+  it('Should call renderView', () => {
+    const spy = jest.spyOn(App.prototype, 'renderView');
+    const wrapper = mount(<App />);
+    wrapper.instance().renderView();
+    expect(spy).toHaveBeenCalled();
+  });
 });
 
-it('adds correctly', () => {
-  expect(1 + 1).toEqual(2);
-});
+describe("API calls to database", () => {
+  it('Should call componentDidMount', () => {
+    const spy = jest.spyOn(App.prototype, 'componentDidMount');
+    const wrapper = mount(<App />);
+    wrapper.instance().componentDidMount();
+    expect(spy).toHaveBeenCalled();
+  });
+  it('Should fetch /espn/schedules', () => {
+    const spy = jest.spyOn(App.prototype, 'componentDidMount');
+    const wrapper = mount(<App />);
+    wrapper.instance().componentDidMount(fetch('espn/schedules'));
+    expect(spy).toHaveBeenCalled();
+  });
+  it('Should fetch /espn/feeds', () => {
+    const spy = jest.spyOn(App.prototype, 'componentDidMount');
+    const wrapper = mount(<App />);
+    wrapper.instance().componentDidMount(fetch('espn/feeds'));
+    expect(spy).toHaveBeenCalled();
+  });
+})
+
+// it("should render Schedule component", () => {
+//   const tree = renderer.create(<Schedule/>).toJSON()
+//   expect(tree).toMatchSnapshot();
+// })
