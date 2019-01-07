@@ -1,10 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable no-undef */
 import App from './App';
-// import { doesNotReject } from 'assert';
 import Schedule from './components/Schedule';
 import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
+import toJson from 'enzyme-to-json';
+
+jest.mock('./components/Schedule', () => 'schedule');
 
 
 describe('App component', () => {
@@ -18,6 +20,13 @@ describe('App component', () => {
     wrapper.instance().renderView();
     expect(spy).toHaveBeenCalled();
   });
+});
+
+describe('Schedule component', () => {
+  it('should render Schedule component', () => {
+    const tree = mount(<App />)
+    expect(toJson(tree)).toMatchSnapshot()
+  })
 });
 
 describe("API calls to database", () => {

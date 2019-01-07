@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">55% </span>
+        <span class="strong">35% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>11/20</span>
+        <span class='fraction'>7/20</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">25% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>2/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">60% </span>
+        <span class="strong">30% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>6/10</span>
+        <span class='fraction'>3/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">55% </span>
+        <span class="strong">35% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>11/20</span>
+        <span class='fraction'>7/20</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -158,8 +158,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -170,7 +170,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -178,11 +178,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -190,7 +190,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -247,7 +247,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -259,7 +259,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
 &nbsp;
-import Schedule from './components/Schedule.js';
+//import Schedule from './components/Schedule.js';
 import Feed from './components/Feed.js';
 import SidebarSchedule from './components/SidebarSchedule.js';
 &nbsp;
@@ -275,29 +275,29 @@ class App extends Component {
     };
   }
 &nbsp;
-  componentDidMount() {
+<span class="fstat-no" title="function not covered" >  co</span>mponentDidMount() {
     // fetch schedule data
-    fetch('espn/schedules')
+<span class="cstat-no" title="statement not covered" >    fetch('espn/schedules')</span>
     .then(<span class="fstat-no" title="function not covered" >re</span>s =&gt; <span class="cstat-no" title="statement not covered" >res.json())</span>
     .then(<span class="fstat-no" title="function not covered" >da</span>ta =&gt; {
 <span class="cstat-no" title="statement not covered" >      this.setState({</span>
         schedule: data,
       })
     })
-    .catch((err) =&gt; {
-      console.log('error: ', err);
+    .catch(<span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; {
+<span class="cstat-no" title="statement not covered" >      console.log('error: ', err);</span>
     });
 &nbsp;
     // fetch feed data
-    fetch('espn/feeds')
+<span class="cstat-no" title="statement not covered" >    fetch('espn/feeds')</span>
     .then(<span class="fstat-no" title="function not covered" >re</span>s =&gt; <span class="cstat-no" title="statement not covered" >res.json())</span>
     .then(<span class="fstat-no" title="function not covered" >da</span>ta =&gt; {
 <span class="cstat-no" title="statement not covered" >      this.setState({</span>
         ramsFeed: data,
       })
     })
-    .catch((err) =&gt; {
-      console.log('error: ', err);
+    .catch(<span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; {
+<span class="cstat-no" title="statement not covered" >      console.log('error: ', err);</span>
     });
   }
 &nbsp;
@@ -370,7 +370,7 @@ export default App;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jan 07 2019 13:17:59 GMT-0800 (PST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jan 07 2019 13:41:52 GMT-0800 (PST)
 </div>
 </div>
 <script src="../../prettify.js"></script>

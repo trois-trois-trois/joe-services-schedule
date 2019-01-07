@@ -5,9 +5,23 @@ exports[`App component should render App component 1`] = `
   <div
     id="schedule"
   >
-    <Schedule
+    <schedule
       ramsSchedule={Array []}
     />
   </div>
 </div>
+`;
+
+exports[`Schedule component should render Schedule component 1`] = `
+<App>
+  <div>
+    <div
+      id="schedule"
+    >
+      <schedule
+        ramsSchedule={Array []}
+      />
+    </div>
+  </div>
+</App>
 `;
