@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Schedule from './components/Schedule.jsx';
-import Feed from './components/Feed.jsx';
-import SidebarSchedule from './components/SidebarSchedule.jsx';
+import Schedule from './components/Schedule.js';
+import Feed from './components/Feed.js';
+import SidebarSchedule from './components/SidebarSchedule.js';
 
 class App extends Component {
   constructor(props) {
