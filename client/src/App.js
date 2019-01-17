@@ -3,15 +3,16 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import Schedule from './components/Schedule';
+import SidebarSchedule from './components/SidebarSchedule';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       schedule: [],
-
       view: 'schedule',
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -36,9 +37,25 @@ class App extends Component {
       });
   }
 
+  handleClick() {
+    const { view } = this.state;
+    this.setState({
+      view: 'schedule',
+    });
+  }
+
   renderView() {
     const { schedule, view } = this.state;
-    if (view === 'schedule') {
+    if (view === 'main') {
+      return (
+        <div id="SidebarSchedule">
+          <SidebarSchedule
+            ramsSchedule={schedule}
+            handleClick={this.handleClick}
+          />
+        </div>
+      );
+    } if (view === 'schedule') {
       return (
         <div id="fullschedule">
           <Schedule
