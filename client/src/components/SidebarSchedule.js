@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 
 const style = {
@@ -5,60 +7,56 @@ const style = {
     border: '1px solid #ccc',
     background: '#fefefe',
   },
-}
+};
+
+const SidebarSchedule = ({ ramsSchedule, handleClick }) => (
+  <div className="col-sm">
+    <p className="h5 text-dark font-weight-bold">REGULAR SEASON</p>
+    <table className="table table-striped table-hover">
+      <thead>
+        <tr className="clickable-row" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+          <th scope="col" />
+          <th scope="col" />
+          <th scope="col" />
+          <th scope="col" />
+        </tr>
+      </thead>
+
+      <tbody>
 
 
-const SidebarSchedule = ({ramsSchedule}) => (
-  <div className="container-fluid">
-    <div className="row justify-content-start">
-      <div className="col-4">
-      <h4>Regular Season</h4>
-      {ramsSchedule.map(schedule => (
-        // <pre key={schedule.id}>
-          <p key={schedule.id}>
-            <img src={`${schedule.opponentlogo}`} className="rounded-circle" width={20} height={20} style={style.image}/>
-            {schedule.vs} {schedule.opponent} {schedule.result}
-          </p>
-          // </pre>
-          ))}
-      </div>
-    </div>
+        {ramsSchedule.map(schedule => (
+
+          <tr key={schedule.id} className="clickable-row" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+            <td>
+              <a href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+                <img src={`${schedule.opponentlogo}`} className="rounded-circle" width={20} height={20} style={style.image} />
+              </a>
+              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+                {schedule.vs}
+              </a>
+            </td>
+            <td>
+              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+                {schedule.opponent}
+              </a>
+            </td>
+            <td>
+              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+                {schedule.wl}
+              </a>
+            </td>
+            <td>
+              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+                <p>{schedule.result}</p>
+              </a>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <button type="button" className="btn btn-link btn-lg" onClick={handleClick}>Full Schedule</button>
   </div>
-  )
+);
 
 export default SidebarSchedule;
-
-
-
-// <table className="table table-striped" >
-//       <thead>
-//         <tr>
-//           {/* //add column headings here */}
-//           <th scope ="col">Week</th>
-//           <th scope ="col">Date</th>
-//           <th scope ="col">Opponent</th>
-//           <th scope ="col">Result</th>
-//           <th scope ="col">W-L</th>
-//           <th scope ="col">HI PASS</th>
-//           <th scope ="col">HI REC</th>
-//           <th scope ="col">HI RUSH</th>
-//         </tr>
-//       </thead>
-//       {/* zen code td */}
-//       {/* tbody>tr>td*9 */}
-//       <tbody>
-//         {ramsSchedule.map(schedule => (
-//         <tr key={schedule.id}>
-//           <td>{schedule.week}</td>
-//           <td>{schedule.date}</td>
-//           <td>{schedule.vs}<img src={`${schedule.opponentlogo}`} className="rounded-circle" width={25} height={25} style={style.image}/> {schedule.city}</td>
-//           <td>{schedule.wl} {schedule.result}</td>
-//           <td>{schedule.winloss}</td>
-//           <td>{schedule.players} {schedule.stats.pass} yards</td>
-//           <td>{schedule.players} {schedule.stats.rec} yards</td>
-//           <td>{schedule.players} {schedule.stats.rush} yards</td>
-//         </tr>
-//         ))}
-//       </tbody>
-//     </table>
-
