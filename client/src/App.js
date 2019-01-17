@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       schedule: [],
-      view: 'schedule',
+      view: 'main',
     };
     this.handleClick = this.handleClick.bind(this);
   }

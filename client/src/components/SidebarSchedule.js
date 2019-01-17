@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 
 const style = {
@@ -7,26 +9,53 @@ const style = {
   },
 };
 
+const SidebarSchedule = ({ ramsSchedule, handleClick }) => (
+  <div className="col-sm">
+    <p className="h5 text-dark font-weight-bold">REGULAR SEASON</p>
+    <table className="table table-striped table-hover">
+      <thead>
+        <tr className="clickable-row" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+          <th scope="col" />
+          <th scope="col" />
+          <th scope="col" />
+          <th scope="col" />
+        </tr>
+      </thead>
 
-const SidebarSchedule = ({ ramsSchedule }) => (
-  <div className="container-fluid">
-    <div className="row justify-content-start">
-      <div className="col-4">
-        <h4>Regular Season</h4>
+      <tbody>
+
+
         {ramsSchedule.map(schedule => (
-        // <pre key={schedule.id}>
-          <p key={schedule.id}>
-            <img src={`${schedule.opponentlogo}`} className="rounded-circle" width={20} height={20} style={style.image} />
-            {schedule.vs}
-            {' '}
-            {schedule.opponent}
-            {' '}
-            {schedule.result}
-          </p>
-          // </pre>
+
+          <tr key={schedule.id} className="clickable-row" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+            <td>
+              <a href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+                <img src={`${schedule.opponentlogo}`} className="rounded-circle" width={20} height={20} style={style.image} />
+              </a>
+              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+                {schedule.vs}
+              </a>
+            </td>
+            <td>
+              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+                {schedule.opponent}
+              </a>
+            </td>
+            <td>
+              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+                {schedule.wl}
+              </a>
+            </td>
+            <td>
+              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+                <p>{schedule.result}</p>
+              </a>
+            </td>
+          </tr>
         ))}
-      </div>
-    </div>
+      </tbody>
+    </table>
+    <button type="button" className="btn btn-link btn-lg" onClick={handleClick}>Full Schedule</button>
   </div>
 );
 
