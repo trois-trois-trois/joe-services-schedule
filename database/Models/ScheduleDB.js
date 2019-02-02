@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
-const onlineDb = require('../../config/keys');
+// const onlineDb = require('../../config/keys');
+mongoose.connect('mongodb://localhost/ramschedule');
 
-mongoose.connect(onlineDb.mongoURI, { useNewUrlParser: true });
+
+// mongoose.connect(onlineDb.mongoURI, { useNewUrlParser: true });
 
 const db = mongoose.connection;
 mongoose.Promise = global.Promise;
